@@ -1,6 +1,14 @@
 # == Route Map
 #
 #                   Prefix Verb   URI Pattern                     Controller#Action
+#                  reviews GET    /reviews(.:format)              reviews#index
+#                          POST   /reviews(.:format)              reviews#create
+#               new_review GET    /reviews/new(.:format)          reviews#new
+#              edit_review GET    /reviews/:id/edit(.:format)     reviews#edit
+#                   review GET    /reviews/:id(.:format)          reviews#show
+#                          PATCH  /reviews/:id(.:format)          reviews#update
+#                          PUT    /reviews/:id(.:format)          reviews#update
+#                          DELETE /reviews/:id(.:format)          reviews#destroy
 #         new_user_session GET    /users/sign_in(.:format)        devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)        devise/sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format)       devise/sessions#destroy
@@ -30,6 +38,8 @@
 #
 
 Rails.application.routes.draw do
+  resources :reviews
+
   devise_for :users
   resources :restaurants
 
