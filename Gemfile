@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 gem 'annotate'
+gem 'searchkick'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
